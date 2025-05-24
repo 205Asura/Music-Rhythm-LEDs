@@ -1,0 +1,331 @@
+\documentclass[a4paper]{article}
+
+\input{embed_video}
+\usepackage{anyfontsize}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,      % Enable colored links
+    linkcolor=black,       % Color for internal links
+    filecolor=black,       % Color for file links
+    urlcolor=red         % Color for URLs
+}
+\usepackage{titlesec}
+\usepackage{media9}
+\usepackage{caption}
+\usepackage{xcolor}
+\usepackage[english]{babel}
+\usepackage{microtype}
+\usepackage{a4wide}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\setlength{\parindent}{0pt}
+\setlength{\headheight}{40pt}
+\setlength{\topmargin}{-50pt}
+\setlength{\footskip}{50pt}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[L]{
+ \begin{tabular}{rl}
+    \begin{picture}(25,15)(0,0)
+    \put(0,-8){\includegraphics[width=8mm, height=8mm]{hcmut.png}}
+    %\put(0,-8){\epsfig{width=10mm,figure=hcmut.eps}}
+   \end{picture}&
+	%\includegraphics[width=8mm, height=8mm]{hcmut.png} & %
+	\begin{tabular}{l}
+		\textbf{\textcolor{blue}{\bf \ttfamily University of Technology}}\\
+		\textbf{\textcolor{blue}{\bf \ttfamily Faculty of Computer Science and Engineering}}
+	\end{tabular} 	
+ \end{tabular}
+}
+\fancyhead[R]{
+	\begin{tabular}{l}
+		\tiny \bf \\
+		\tiny \bf 
+	\end{tabular}  }
+\fancyfoot{} % clear all footer fields
+\fancyfoot[L]{\scriptsize \ttfamily \textcolor{blue}{Electrical Electronic Circuits Lab 4}}
+\fancyfoot[R]{\scriptsize \ttfamily Page {\thepage}/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+
+%\usepackage[margin=1.5in,top=1.5in,bottom=1.5in]{geometry}
+
+\usepackage{titling}
+
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usetikzlibrary{calc}
+\numberwithin{figure}{section}
+\setlength{\droptitle}{-3cm}
+
+\begin{document}
+\begin{titlepage}
+\begin{tikzpicture}[overlay,remember picture]
+\draw [line width = 3pt]
+    ($ (current page.north west) + (0.8in,-0.9in) $)
+    rectangle
+    ($ (current page.south east) + (-0.8in,0.9in) $);
+\draw [line width = 0.5pt]
+    ($ (current page.north west) + (0.84in,-0.94in) $)
+    rectangle
+    ($ (current page.south east) + (-0.84in,0.94in) $);
+    
+\end{tikzpicture}
+\begin{center}
+\vspace{-0.4cm} 
+\fontsize{12pt}{0pt}\selectfont VIETNAM NATIONAL UNIVERSITY, HO CHI MINH CITY 
+\\
+%\vspace{2pt}
+\fontsize{12pt}{0pt}\selectfont UNIVERSITY OF TECHNOLOGY 
+\\
+\vspace{2.3pt}
+\fontsize{12pt}{0pt}\selectfont FACULTY OF COMPUTER SCIENCE AND ENGINEERING 
+\\
+\vspace{1cm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=5.9cm,height=5.5cm]{hcmut.png}
+\end{figure}
+\vspace{1cm}
+\fontsize{20pt}{0pt}\selectfont ELECTRICAL ELECTRONIC CIRCUITS \\
+\vspace{12pt}
+\fontsize{20pt}{0pt}\selectfont REPORT \\
+\vspace{17pt}
+\textbf{\fontsize{28pt}{0pt}\selectfont ASSIGNMENT} \\
+\vspace{0.5cm}
+\end{center}
+\hspace{6pt}
+\textbf{\fontsize{14pt}{0pt}\selectfont Topic:} 
+\begin{center}
+\vspace{0.5cm}
+\textbf{\fontsize{20pt}{0pt}\selectfont  Music Rhythm LEDs} 
+
+\vspace{1cm}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{l l}
+    \textbf{\fontsize{14pt}{0pt}\selectfont Instructor:} & \fontsize{14pt}{0pt}\selectfont Nguyen Thien An \vspace{6pt} \\
+    \textbf{\fontsize{14pt}{0pt}\selectfont Student name:} & \fontsize{14pt}{0pt}\selectfont Nguyen Bui Tuan Anh \vspace{6pt} \\ 
+    \textbf{\fontsize{14pt}{0pt}\selectfont Student ID:} & \fontsize{14pt}{0pt}\selectfont 2352038 \vspace{6pt} \\
+    \textbf{\fontsize{14pt}{0pt}\selectfont Class:} & \fontsize{14pt}{0pt}\selectfont CC03
+\end{tabular}
+\end{table}
+\vspace{3.3cm}
+\fontsize{12pt}{0pt}\selectfont HO CHI MINH CITY, 2024
+\end{center}
+\end{titlepage}
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Introduction}
+In this assignment, I am working on a PCB project that is the Music Rhythm LEDs circuit. It uses a microphone to detect sound and flashes LEDs in sync with the rhythm of the music.
+
+\section{Schematic and Conceptual Design}
+\subsection{Schematic Design}
+This is the Schematic Design for my circuit.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.18\linewidth]{schem.png}
+    \caption{Schematic Design}
+\end{figure}
+\newpage
+\subsection{Conceptual Design}
+\subsubsection{Form Factor with Hardware Interface}
+Sketching the form factor in Altium Designer
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{form.png}
+    \caption{Form Factor}
+\end{figure}
+I will explain the interface of the form factor above:
+\begin{itemize}
+    \item R1 to R9: Resistors $R_1 \ \text{to} \ R_9$
+    \item C1: Capacitor $C_1$
+    \item Q1 to Q7: Transistors $Q_1 \ \text{to} \ Q_7$
+    \item D1 to D6: 6 LEDs 
+    \item MIC: the Microphone to detect sound
+    \item SW1: Switch
+    \item The 9V battery holder.
+\end{itemize}
+
+The main working principle of this circuit is:
+\subsubsection*{1. Sound Detection and Amplification}
+\begin{itemize}
+    \item The microphone picks up sound, converting it into an AC signal. This AC signal is coupled through C1 to the base of Q1.
+    \item Transistor Q1 amplifies the signal from the microphone. As the sound intensity changes, the amplified signal at the collector of Q1 will fluctuate accordingly.
+\end{itemize}
+\subsubsection*{2. LED Flashing Circuit}
+\begin{itemize}
+    \item The amplified signal is then used to drive the base of each of the transistors Q2 to Q7.
+    \item Each of these transistors controls one LED, and when the base voltage is high enough, the corresponding transistor conducts, allowing current to flow through the LED, causing it to light up.
+    \item The resistors R4 to R9 limit the current and voltage apply to each LED, preventing damage.
+\end{itemize}
+\subsubsection*{3. Synchronization with Music Rhythm:}
+\begin{itemize}
+    \item As the sound signal changes in intensity with the rhythm, the amplified output changes, causing different transistors to switch on and off.
+    \item This synchronized flashing effect creates a light show in rhythm with the music.
+\end{itemize}
+
+\subsection{Functional Blocks}
+According to the schematic and conceptual above, this device can be defined to have 3 main blocks:
+\begin{itemize}
+    \item Power Supply: the 9V DC source (Battery).
+    \item Function: flashing LEDs syncing with the input Music.
+    \item Human Interface: Switch to turn on/off, the Microphone and the LEDs dancing.
+\end{itemize}
+\section{Hardware Specification}
+In this section, I will explain the components in details by some attributes and calculations.
+\subsubsection*{1. Electret condenser Microphone 56DB DIP}
+Detects sound and converts it into a small electrical signal – steady DC voltage (idle bias), with the AC audio signal superimposed
+\begin{itemize}
+    \item Omnidirectional
+    \item Operating voltage: 3 - 5V. We can choose typically as 4V
+    \item Frequency Range: 50 – 16kHz
+    \item Current consumption: Max 0.5mA 
+    \item Sentivity: $-56\pm2\, dB$
+\end{itemize}
+\href{https://banlinhkien.com/cam-bien-am-thanh-mic-9x7mm-56db-dip-p6650694.html}{56DB DIP Datasheet}
+\subsubsection*{2. Capacitor \boldmath{$C_1$ ($100 \, \mathrm{nF}$) }}
+Blocks the DC bias voltage and allows only the AC (audio) signal from the microphone to pass through. This capacitor $C_1$ and resistor $R_2$ also form a high-pass filter that blocks all the frequency that $< f_c$ (cut-off frequency)\\
+\\
+Therefore, we need the frequency $f_c$  to be lower than or equal to the range of 50 – 16kHz (frequency range of the Mic). We will now choose appropriate the value for $R_2$ right after this.
+\[
+f_c=\frac{1}{2\pi R_2C_1}=\frac{1}{2\pi R_2\times100\times10^{-9}}
+\]
+The capacitor is non-polar, so I choose a ceramic one\\
+\href{https://www.thegioiic.com/tu-gom-multilayer-100nf-0-1uf-50v}{Capacitor $C_1$}\\
+
+
+\subsubsection*{3. Resistors \boldmath{$R_1$, $R_2$, $R_3$}}
+\begin{itemize}
+    \item \textbf{\boldmath{$R_1$} ($10\,\text{k}\Omega$):} Pull-up resistor, modify the appropriate voltage bias (2V), and current consumption (0.5mA) apply to the microphone.
+\end{itemize}
+The capacitor $C_1$ blocks DC, so we can calculate the current through the mic (which is the current through $R_1$), and has to be $\le0.5 \, \text{mA}$\\
+\[
+I_{mic}=\frac{V_{DC}-V_{mic}}{R_1}=\frac{9-4}{10}=0.5\,\text{mA}
+\]
+\begin{itemize}
+    \item \textbf{\boldmath{$R_2$} ($1\,\text{M}\Omega$):} Connect with the capacitor $C_1$ to form a high-pass filter, define a low cut-off frequency $f_c$ which should be less than the range 50 - 16kHz of the Mic, allow full audio signal to pass through
+\end{itemize}
+$$
+f_c=\frac{1}{2\pi R_2C_1}=\frac{1}{2\pi \times 10^6 \times 100 \times 10^{-9}}=1.6\,\text{Hz}<\text{frequency range of the Mic}
+$$
+\begin{itemize}
+    \item \textbf{\boldmath{$R_3$} ($10\,\text{k}\Omega$):} Bias resistor for the transistor $Q_1$.
+\end{itemize}
+\href{https://www.thegioiic.com/dien-tro-10-kohm-1-2w-1-5-vong-mau}{Resistor $10 \, \mathrm{k\Omega}$}\\
+\href{https://www.thegioiic.com/dien-tro-1-mohm-1-2w-5-4-vong-mau}{Resistor $1 \, \mathrm{M\Omega}$}
+\subsubsection*{\textbf{4. Transistors}}
+\begin{itemize}
+    \item Transistor $Q_1$ (BC547): Amplifies the audio signal from the microphone.
+    \item Transistors $Q_2$ to $Q_7$ (BC547): Each drives one LED in response to the amplified signal.
+
+\end{itemize}
+\href{https://www.alldatasheet.com/datasheet-pdf/view/2894/MOTOROLA/BC547B.html}{BC547 Datasheet}.
+
+\subsubsection*{5. LEDs \boldmath{($LED_1 \ \text{to} \ LED_6$)}}
+Flash in response to music rhythm. Size: $10 \, \mathrm{mm}$\\
+\\
+\textbf{Red LEDs:}
+\begin{itemize}
+\item Operating voltage: max 2.3V (typical 2.2V)
+\item Current drive: 20mA
+\end{itemize}
+\textbf{Green LEDs:}
+\begin{itemize}
+\item Operating voltage: max 3 - 3.3V (typical 3.2V)
+\item Current drive: 20mA
+\end{itemize}
+\href{https://dientunhattung.com/san-pham/led-trong-10mm-mau-do-chan-dai-led-sieu-sang/}{Red LEDs}\\
+\href{https://dientunhattung.com/san-pham/led-trong-10mm-mau-xanh-la-chan-dai-led-sieu-sang/}{Green LEDs}
+
+\subsubsection*{6. Resistors \boldmath{$R_4 \ \text{to} \ R_9$}}
+Limit the current and voltage apply to each LED, protecting them from excessive current.\\
+\\
+{\boldmath$R_{4\rightarrow6}:$}
+\begin{itemize}
+    \item We choose typical V = 2.2V for Red LEDs
+    \item The max value of $V_{CE}$ is 45 for the BC547 transistor.
+    \item The current through Red LEDs is 20mA
+\end{itemize}
+So, we need the resistors to satisfy those values. I choose a common resistor value of $22 \, \Omega$ for $R_{4\rightarrow6}$
+$$
+V_{CE}=V_{DC} - V_{LED} -I_{LED}\times R_{4\rightarrow6} = 9-2.2-20\times10^{-3}\times22=6.36 \, \mathrm{V} < 45 \, \mathrm{V}
+$$
+{\boldmath$R_{7\rightarrow9}:$}
+\begin{itemize}
+    \item We choose typical V = 3.2V for Green LEDs
+    \item The max value of $V_{CE}$ is 45 for the BC547 transistor.
+    \item The current through Green LEDs is 20mA
+\end{itemize}
+So, we need the resistors to satisfy those values. I choose a common resistor value of $22 \, \Omega$ for $R_{7\rightarrow9}$
+$$
+V_{CE}=V_{DC} - V_{LED} -I_{LED}\times R_{7\rightarrow9} = 9-3.2-20\times10^{-3}\times22=5.36 \, \mathrm{V} < 45 \, \mathrm{V}
+$$
+\href{https://banlinhkien.com/tro-carbon-film-14w-22r-5-cf14w22rjtb-chinh-hang-maxquality-tui-500-chiec-p38420308.html}{Resistor $22 \, \Omega$}
+\subsubsection*{7. Battery 9V:} 
+The battery supplies constant DC voltage source for the device. As shown in some calculations above, 9V is suitable for this device.\\
+\\
+\href{https://caka.vn/pin-9v}{9V Battery}\\
+\href{https://dientunhattung.com/san-pham/de-pin-9v-han-pcb-hop-de-pin-9v-han-mach-khong-nap/}{Battery Holder}
+
+\subsubsection*{8. Switch:}
+Turn on or off the device. For the final PCB device, I will use a rocker switch and connect its wire to the PCB board for better appearance and convenience.\\
+\\
+\href{https://www.thegioiic.com/kcd1-101-cong-tac-bap-benh-on-off-2-chan-noi-day-dai-10cm}{Rocker Switch}
+\newpage
+\section{PCB Layout}
+The PCB Layout of this device is made in Altium Designer. My PCB device has 1 layer so the only layer we need is the bottom layer.
+\subsection{2D Layout:}
+This is the bottom layout after everything have been done (including polygon pour, mounting holes, etc)
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{bottom2d.png}
+    \caption{Bottom Layer}
+\end{figure}
+\newpage
+\subsection{3D Layout}
+Here are some 3D view of the project
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{3d1.png}
+    \caption{3D Layout}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{3d2.png}
+    \caption{3D Layout}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{3d3.png}
+    \caption{3D Layout}
+\end{figure}
+\subsection{Final PCB Device Layout}
+This is my One-Layer PCB Rhythm Music LEDs device
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Device Layout.jpg}
+    \caption{PCB Device}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Device Layout Bot.jpg}
+    \caption{PCB Device}
+\end{figure}
+\section{Device Demonstration}
+This is a video I recorded to show how the device works: \href{https://www.youtube.com/watch?v=cwNKPTRDnqY}{Rhythm Music LEDs device Demo}
+\\ \\
+Thank you for watching.
+\section{Altium Education Certificate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{cer.png}
+    \caption{Altium Certificate}
+\end{figure}
+\end{document}
