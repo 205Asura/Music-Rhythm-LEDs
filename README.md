@@ -12,7 +12,13 @@ The Music Rhythm LEDs is a simple yet engaging PCB-based device that visualizes 
 
 The schematic was designed in Altium Designer. It includes a microphone for sound detection, amplification via transistors, and LED drivers.
 
-<img width="1200" alt="image" src="https://github.com/user-attachments/assets/f67de60f-2fb2-46e4-a79f-7e93092ca0e2" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f67de60f-2fb2-46e4-a79f-7e93092ca0e2" 
+       alt="3D views of the assembled PCB" 
+       width="1200"/>
+  <br>
+  <i>Figure 1: Schematic design</i>
+</p>
 
 #### Working Principle
 
@@ -77,16 +83,23 @@ Detailed components and calculations:
 Designed in Altium Designer as a single-layer PCB (bottom layer only).
 
 ### 2D Layout
-
-Bottom layer after polygon pour and mounting holes.
-
-<img width="500" alt="image" src="https://github.com/user-attachments/assets/9f07527b-e28a-4e15-9de6-a48416ad4357" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9f07527b-e28a-4e15-9de6-a48416ad4357" 
+       alt="Basys 3" 
+       width="800"/>
+  <br>
+  <i>Figure 2: Bottom layer after polygon pour and mounting holes</i>
+</p>
 
 ### 3D Layout
 
-3D views of the assembled PCB.
-
-<img width="500" alt="image" src="https://github.com/user-attachments/assets/ed3211d0-1d2c-42a2-8d65-aab56afa04b9" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ed3211d0-1d2c-42a2-8d65-aab56afa04b9" 
+       alt="3D views of the assembled PCB" 
+       width="800"/>
+  <br>
+  <i>Figure 3: Bottom layer after polygon pour and mounting holes</i>
+</p>
 
 ### Final PCB Device Layout
 
