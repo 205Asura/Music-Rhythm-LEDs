@@ -12,7 +12,7 @@ The Music Rhythm LEDs is a simple yet engaging PCB-based device that visualizes 
 
 The schematic was designed in Altium Designer. It includes a microphone for sound detection, amplification via transistors, and LED drivers.
 
-<img width="1727" height="664" alt="image" src="https://github.com/user-attachments/assets/f67de60f-2fb2-46e4-a79f-7e93092ca0e2" />
+<img width="1200" alt="image" src="https://github.com/user-attachments/assets/f67de60f-2fb2-46e4-a79f-7e93092ca0e2" />
 
 #### Working Principle
 
@@ -80,24 +80,24 @@ Designed in Altium Designer as a single-layer PCB (bottom layer only).
 
 Bottom layer after polygon pour and mounting holes.
 
-<img width="1290" height="767" alt="image" src="https://github.com/user-attachments/assets/9f07527b-e28a-4e15-9de6-a48416ad4357" />
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/9f07527b-e28a-4e15-9de6-a48416ad4357" />
 
 ### 3D Layout
 
 3D views of the assembled PCB.
 
-<img width="1332" height="782" alt="image" src="https://github.com/user-attachments/assets/ed3211d0-1d2c-42a2-8d65-aab56afa04b9" />
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/ed3211d0-1d2c-42a2-8d65-aab56afa04b9" />
 
 ### Final PCB Device Layout
 
 Physical one-layer PCB.
 
-<img width="2568" height="1926" alt="image" src="https://github.com/user-attachments/assets/6aa8b66a-ab49-40a2-b026-a45f979c440a" />
-<img width="2568" height="1926" alt="image" src="https://github.com/user-attachments/assets/3aad6bb4-a08a-4f7d-b92d-ed7b997db5e3" />
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/6aa8b66a-ab49-40a2-b026-a45f979c440a" />
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/3aad6bb4-a08a-4f7d-b92d-ed7b997db5e3" />
 
 ## Device Demonstration
 
-Watch the video demo showing the device in action: [Rhythm Music LEDs Device Demo](https://www.youtube.com/watch?v=cwNKPTRDnqY)  
+Watch the video demo showing the device in action: [Demo](https://www.youtube.com/watch?v=cwNKPTRDnqY)  
 
 ## How to Build
 
