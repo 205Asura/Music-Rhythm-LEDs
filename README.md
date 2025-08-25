@@ -1,7 +1,6 @@
 # Music Rhythm LEDs
 
-This repository contains the design files and documentation for a Music Rhythm LEDs PCB project. The circuit uses a microphone to detect sound and flashes LEDs in sync with the rhythm of the music. This project was developed as part of the Electrical Electronic Circuits assignment at the University of Technology, Ho Chi Minh City.
-
+This repository contains the design files and documentation for a Music Rhythm LEDs PCB project. The circuit uses a microphone to detect sound and flashes LEDs in sync with the rhythm of the music.
 ## Introduction
 
 The Music Rhythm LEDs is a simple yet engaging PCB-based device that visualizes music rhythms through LED flashing. A microphone captures audio input, amplifies it, and drives transistors to light up LEDs in response to sound intensity variations, creating a synchronized light show.
